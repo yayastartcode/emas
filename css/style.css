@@ -1201,6 +1201,233 @@ textarea.form-input {
 }
 
 /* ==========================================================================
+   BUSINESS SECTORS & PORTFOLIOS (CONGLOMERATE EXPANSION)
+   ========================================================================== */
+.sectors {
+  padding: 8rem 0;
+  background-color: var(--bg-deep);
+  position: relative;
+}
+
+.sectors-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+.sector-card {
+  background-color: var(--bg-card);
+  border: var(--border-soft);
+  border-radius: 8px;
+  padding: 3rem 2.5rem;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.sector-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s;
+}
+
+.sector-card.sector-mining::before {
+  background: linear-gradient(90deg, var(--primary-gold), var(--accent-bronze));
+}
+
+.sector-card.sector-agro::before {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+
+.sector-card.sector-marine::before {
+  background: linear-gradient(90deg, #06b6d4, #22d3ee);
+}
+
+.sector-card:hover {
+  transform: translateY(-8px);
+  background-color: var(--bg-card-hover);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.sector-card.sector-mining:hover {
+  border-color: rgba(var(--primary-gold-rgb), 0.3);
+  box-shadow: 0 20px 40px rgba(var(--primary-gold-rgb), 0.08);
+}
+
+.sector-card.sector-agro:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.08);
+}
+
+.sector-card.sector-marine:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 20px 40px rgba(6, 182, 212, 0.08);
+}
+
+.sector-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border: 1px solid transparent;
+}
+
+.sector-mining .sector-icon {
+  background-color: rgba(var(--primary-gold-rgb), 0.08);
+  border-color: rgba(var(--primary-gold-rgb), 0.2);
+  color: var(--primary-gold);
+}
+
+.sector-agro .sector-icon {
+  background-color: rgba(16, 185, 129, 0.08);
+  border-color: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+}
+
+.sector-marine .sector-icon {
+  background-color: rgba(6, 182, 212, 0.08);
+  border-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+}
+
+.sector-card .sector-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.sector-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+  flex-grow: 1;
+}
+
+.sector-btn {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: auto;
+}
+
+.sector-mining .sector-btn { color: var(--primary-gold); }
+.sector-agro .sector-btn { color: #10b981; }
+.sector-marine .sector-btn { color: #06b6d4; }
+
+.sector-btn svg {
+  transition: transform 0.3s;
+}
+
+.sector-card:hover .sector-btn svg {
+  transform: translateX(5px);
+}
+
+/* Crops & Marine Showcase */
+.commodities-showcase {
+  margin-top: 5rem;
+  border-top: var(--border-soft);
+  padding-top: 5rem;
+}
+
+.showcase-header {
+  margin-bottom: 3.5rem;
+  text-align: center;
+}
+
+.crops-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.commodity-card {
+  background-color: var(--bg-card);
+  border: var(--border-soft);
+  border-radius: 6px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.commodity-card:hover {
+  transform: translateY(-5px);
+  background-color: var(--bg-card-hover);
+}
+
+.commodity-card.card-crop:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  box-shadow: 0 10px 20px rgba(16, 185, 129, 0.05);
+}
+
+.commodity-card.card-marine:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 10px 20px rgba(6, 182, 212, 0.05);
+}
+
+.commodity-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-crop .commodity-icon {
+  background-color: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  color: #10b981;
+}
+
+.card-marine .commodity-icon {
+  background-color: rgba(6, 182, 212, 0.08);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+}
+
+.commodity-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.commodity-desc {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.marine-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ==========================================================================
    RESPONSIVE MEDIA QUERIES (Mobile First Strategy)
    ========================================================================== */
 @media (max-width: 1024px) {
@@ -1208,6 +1435,15 @@ textarea.form-input {
     font-size: 3.25rem;
   }
   
+  .sectors-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .crops-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .about-grid, .projects-content-pane, .esg-grid, .contact-grid {
     grid-template-columns: 1fr;
     gap: 4rem;

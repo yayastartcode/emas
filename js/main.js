@@ -259,16 +259,17 @@ const translations = {
     // Nav
     'nav-home': 'Beranda',
     'nav-about': 'Tentang Kami',
-    'nav-projects': 'Proyek Eksplorasi',
+    'nav-sectors': 'Sektor Bisnis',
+    'nav-projects': 'Eksplorasi Emas',
     'nav-esg': 'Keberlanjutan (ESG)',
     'nav-tech': 'Geoteknologi',
     'nav-contact': 'Kontak',
     
     // Hero
-    'hero-tag': 'Eksplorasi Emas Berkelanjutan',
-    'hero-title': 'Menyingkap Potensi, Memberdayakan Negeri.',
-    'hero-desc': 'PT Melyoni Mineral Nusantara memimpin eksplorasi emas presisi tinggi di Kalimantan Timur dan Sulawesi Utara dengan komitmen tata kelola lingkungan (ESG) yang bertanggung jawab.',
-    'hero-btn-explore': 'Jelajahi Proyek',
+    'hero-tag': 'Mineral, Pertanian & Kelautan',
+    'hero-title': 'Sumber Daya Nusantara, Kredibilitas Global.',
+    'hero-desc': 'PT Melyoni Mineral Nusantara mengelola potensi alam Indonesia melalui eksplorasi emas presisi tinggi serta penyuplai komoditas pertanian dan kelautan berkelanjutan berkualitas dunia.',
+    'hero-btn-explore': 'Sektor Bisnis',
     'hero-btn-contact': 'Hubungi Kami',
     'hero-stat-1-lbl': 'Konsesi Aktif',
     'hero-stat-2-lbl': 'Sumber Daya Tereka',
@@ -286,9 +287,49 @@ const translations = {
     'val-3-desc': 'Reklamasi bertahap dan pemulihan biodiversitas lokal sejak fase eksplorasi awal.',
     'val-4-title': 'Kemitraan Sosial',
     'val-4-desc': 'Pemberdayaan ekonomi dan infrastruktur masyarakat di sekitar wilayah operasional.',
+
+    // Business Sectors
+    'sectors-tag': 'Portofolio Bisnis',
+    'sectors-title': 'Tiga Pilar Utama Sumber Daya Alam',
+    'sectors-desc': 'Kami mensinergikan pengelolaan sumber daya mineral berharga, perkebunan agro-komoditas unggul, dan hasil kelautan organik untuk melayani pasar global secara bertanggung jawab.',
+    'sec-mining-title': 'Eksplorasi Mineral',
+    'sec-mining-desc': 'Eksplorasi emas presisi tinggi di Kalimantan Timur dan Manado menggunakan teknik ramah lingkungan untuk mendefinisikan cadangan mineral berkualitas dunia.',
+    'sec-btn-mining': 'Lihat Eksplorasi',
+    'sec-agro-title': 'Pertanian & Perkebunan',
+    'sec-agro-desc': 'Penyuplai dan pengelola berbagai komoditas pertanian unggulan Indonesia, memadukan pemberdayaan petani lokal dan rantai pasok global yang andal.',
+    'sec-btn-agro': 'Jelajahi Hasil Bumi',
+    'sec-marine-title': 'Kelautan & Perikanan',
+    'sec-marine-desc': 'Memproduksi dan mendistribusikan perikanan premium dan rumput laut berkualitas tinggi untuk industri hydrocolloid, pangan, dan ekspor kosmetika.',
+    'sec-btn-marine': 'Jelajahi Hasil Laut',
+
+    // Crops
+    'crop-sec-tag': 'Hasil Bumi Unggulan',
+    'crop-sec-title': 'Produk Pertanian & Perkebunan',
+    'crop-1-name': 'Kentang',
+    'crop-1-desc': 'Varietas kentang dataran tinggi premium untuk konsumsi segar dan industri olahan lokal.',
+    'crop-2-name': 'Kelapa',
+    'crop-2-desc': 'Kelapa organik kualitas ekspor, siap menyuplai minyak kelapa murni, serat, dan kopra.',
+    'crop-3-name': 'Singkong Gajah',
+    'crop-3-desc': 'Singkong gajah jumbo dengan kadar pati tinggi, ideal untuk industri tepung tapioka dan energi terbarukan.',
+    'crop-4-name': 'Kedele',
+    'crop-4-desc': 'Kedelai kuning unggul non-transgenik (non-GMO) untuk pemenuhan gizi pangan nabati industri tahu-tempe nasional.',
+    'crop-5-name': 'Jagung',
+    'crop-5-desc': 'Jagung pipil kuning berkadar air rendah, dioptimalkan untuk pakan ternak dan pati industri.',
+    'crop-6-name': 'Pala',
+    'crop-6-desc': 'Rempah pala kualitas tinggi dari kepulauan tropis Nusantara, bernilai tinggi di pasar ekspor Eropa dan Asia.',
+    'crop-7-name': 'Bawang Merah & Putih',
+    'crop-7-desc': 'Pasokan bawang merah lokal yang harum dan bawang putih berkualitas untuk ketahanan bumbu pangan nasional.',
+
+    // Marine
+    'marine-sec-tag': 'Kekayaan Laut Nusantara',
+    'marine-sec-title': 'Komoditas Perikanan & Kelautan',
+    'marine-1-name': 'Perikanan',
+    'marine-1-desc': 'Penyedia hasil laut tangkapan segar dan perikanan beku standar ekspor tinggi untuk menjamin nilai nutrisi optimal.',
+    'marine-2-name': 'Rumput Laut',
+    'marine-2-desc': 'Kultivasi rumput laut kering jenis Cottonii dan Gracilaria organik untuk bahan karagenan dunia.',
     
     // Projects
-    'projects-tag': 'Eksplorasi Lapangan',
+    'projects-tag': 'Eksplorasi Emas',
     'projects-title': 'Dua Wilayah Konsesi Utama Emas Indonesia',
     'projects-desc': 'Proyek eksplorasi kami berada di jalur busur vulkanik Sunda-Banda dan sistem epithermal Kalimantan, dikenal sebagai wilayah dengan endapan emas kualitas tinggi.',
     'proj-btn-details': 'Unduh Profil Teknis (PDF)',
@@ -349,7 +390,7 @@ const translations = {
     'form-btn': 'Kirim Pesan',
     
     // Footer
-    'footer-brand-desc': 'PT Melyoni Mineral Nusantara adalah perusahaan eksplorasi emas Indonesia yang berdedikasi pada keunggulan ilmiah, pengelolaan lingkungan, dan kemakmuran sosial.',
+    'footer-brand-desc': 'PT Melyoni Mineral Nusantara adalah perusahaan eksploitasi mineral, penyuplai produk pertanian, kelautan dan komoditas sumber daya alam Indonesia terkemuka yang berdedikasi pada sains dan kemakmuran sosial.',
     'footer-links-explore': 'Jelajahi',
     'footer-links-legal': 'Hukum & Legalitas'
   },
@@ -357,16 +398,17 @@ const translations = {
     // Nav
     'nav-home': 'Home',
     'nav-about': 'About Us',
-    'nav-projects': 'Exploration Projects',
+    'nav-sectors': 'Business Sectors',
+    'nav-projects': 'Gold Exploration',
     'nav-esg': 'Sustainability (ESG)',
     'nav-tech': 'Geotechnology',
     'nav-contact': 'Contact',
     
     // Hero
-    'hero-tag': 'Sustainable Gold Exploration',
-    'hero-title': 'Unearthing Wealth, Empowering the Nation.',
-    'hero-desc': 'PT Melyoni Mineral Nusantara leads high-precision gold exploration in East Kalimantan and North Sulawesi, committed to responsible environmental, social, and governance (ESG) standards.',
-    'hero-btn-explore': 'Explore Projects',
+    'hero-tag': 'Minerals, Agriculture & Marine',
+    'hero-title': 'Nusantara Resources, Global Credibility.',
+    'hero-desc': 'PT Melyoni Mineral Nusantara manages Indonesia\'s rich natural resources through high-precision gold exploration and world-class sustainable agricultural and marine commodity supply chains.',
+    'hero-btn-explore': 'Business Sectors',
     'hero-btn-contact': 'Contact Us',
     'hero-stat-1-lbl': 'Active Concessions',
     'hero-stat-2-lbl': 'Inferred Resources',
@@ -384,9 +426,49 @@ const translations = {
     'val-3-desc': 'Progressive reclamation and local biodiversity restoration from the initial exploration phase.',
     'val-4-title': 'Social Partnership',
     'val-4-desc': 'Empowering community economics and infrastructure around our exploration regions.',
+
+    // Business Sectors
+    'sectors-tag': 'Business Portfolios',
+    'sectors-title': 'Three Key Pillars of Natural Resources',
+    'sectors-desc': 'We synergize the management of precious minerals, premium agro-commodity plantations, and organic marine products to serve global markets responsibly.',
+    'sec-mining-title': 'Mineral Exploration',
+    'sec-mining-desc': 'High-precision gold exploration in East Kalimantan and Manado using eco-friendly methods to define world-class mineral deposits.',
+    'sec-btn-mining': 'View Exploration',
+    'sec-agro-title': 'Agriculture & Plantations',
+    'sec-agro-desc': 'Supplier and manager of Indonesia\'s premium agricultural commodities, blending local farmer empowerment with robust global supply chains.',
+    'sec-btn-agro': 'Explore Crops',
+    'sec-marine-title': 'Marine & Aquaculture',
+    'sec-marine-desc': 'Producing and supplying premium seafood and high-grade seaweed for global hydrocolloid, food, and cosmetic export industries.',
+    'sec-btn-marine': 'Explore Sea Resources',
+
+    // Crops
+    'crop-sec-tag': 'Premium Crops',
+    'crop-sec-title': 'Agricultural & Plantation Products',
+    'crop-1-name': 'Potatoes',
+    'crop-1-desc': 'Premium highland potato varieties for fresh consumption and local food processing industries.',
+    'crop-2-name': 'Coconuts',
+    'crop-2-desc': 'Export-quality organic coconuts, ready to supply virgin coconut oil, coir fiber, and copra.',
+    'crop-3-name': 'Elephant Cassava',
+    'crop-3-desc': 'High-starch giant elephant cassava, ideal for tapioca starch processing and bioenergy.',
+    'crop-4-name': 'Soybeans',
+    'crop-4-desc': 'Premium non-GMO yellow soybeans for national plant-based nutrition and local industries.',
+    'crop-5-name': 'Corn',
+    'crop-5-desc': 'Low-moisture yellow corn kernels, optimized for animal feed and industrial starch production.',
+    'crop-6-name': 'Nutmeg',
+    'crop-6-desc': 'High-grade nutmeg spices from Indonesia\'s rich volcanic islands, highly valued in European and Asian export markets.',
+    'crop-7-name': 'Shallots & Garlic',
+    'crop-7-desc': 'Reliable supply of aromatic local shallots and high-quality garlic for national food security.',
+
+    // Marine
+    'marine-sec-tag': 'Nusantara Marine Wealth',
+    'marine-sec-title': 'Fisheries & Marine Commodities',
+    'marine-1-name': 'Fisheries',
+    'marine-1-desc': 'High-standard fresh catches and frozen seafood exports, preserving optimal nutritional values.',
+    'marine-2-name': 'Seaweed',
+    'marine-2-desc': 'High-grade Gracilaria and organic Eucheuma Cottonii seaweed cultivation for global hydrocolloid processing.',
     
     // Projects
-    'projects-tag': 'Field Exploration',
+    'projects-tag': 'Gold Exploration',
     'projects-title': 'Two Major Indonesian Gold Concession Zones',
     'projects-desc': 'Our exploration projects are situated along the Sunda-Banda volcanic arc and the geological structures of Kalimantan, famed for high-grade gold deposits.',
     'proj-btn-details': 'Download Technical Profile (PDF)',
@@ -395,7 +477,7 @@ const translations = {
     'proj-kaltim-title': 'East Kalimantan Exploration Project',
     'proj-kaltim-desc': 'A concession zone focused on low-sulfidation epithermal gold reserves and mineral-rich alluvial deposits. Located in Kaltim\'s interior with highly promising geological structures.',
     'kaltim-stage': 'Advanced Exploration (Phase 2 Boring)',
-    'kaltim-area': '12,500 Hectares',
+    'kaltim-area': '12,500 Hektares',
     'kaltim-geology': 'Low-Sulfidation Epithermal',
     'kaltim-methods': 'LiDAR & Geochemical Mapping',
     
@@ -403,7 +485,7 @@ const translations = {
     'proj-manado-title': 'Manado Exploration Project',
     'proj-manado-desc': 'Targeting high-sulfidation epithermal gold-silver structures along North Sulawesi\'s volcanic belt. Exploration focuses on mapping alteration zones and core drilling to define ore geometries.',
     'manado-stage': 'Prospecting Core Drilling',
-    'manado-area': '8,200 Hectares',
+    'manado-area': '8,200 Hektares',
     'manado-geology': 'High-Grade Epithermal Gold-Silver',
     'manado-methods': 'IP Geophysics & Drilling Core',
     
@@ -447,7 +529,7 @@ const translations = {
     'form-btn': 'Send Message',
     
     // Footer
-    'footer-brand-desc': 'PT Melyoni Mineral Nusantara is an Indonesian gold exploration company dedicated to scientific excellence, environmental stewardship, and social prosperity.',
+    'footer-brand-desc': 'PT Melyoni Mineral Nusantara is a leading Indonesian diversified resource and commodity group dedicated to mineral exploration, sustainable agricultural crop supply, premium marine aquaculture, scientific excellence, and social prosperity.',
     'footer-links-explore': 'Explore',
     'footer-links-legal': 'Legal & Compliance'
   }
