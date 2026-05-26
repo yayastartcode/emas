@@ -1430,6 +1430,31 @@ textarea.form-input {
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES (Mobile First Strategy)
    ========================================================================== */
+/* Custom navigation optimization for medium viewports (laptops and tablets) */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .nav-container {
+    gap: 1.5rem;
+  }
+  
+  .nav-menu {
+    gap: 1.25rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 0.5rem 0.25rem;
+    max-width: 480px;
+    scrollbar-width: none; /* Hide scrollbar for Firefox */
+  }
+  
+  .nav-menu::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, Opera */
+  }
+  
+  .nav-link {
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+  }
+}
+
 @media (max-width: 1024px) {
   .hero-title {
     font-size: 3.25rem;
