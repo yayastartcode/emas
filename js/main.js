@@ -1,5 +1,5 @@
 /* ==========================================================================
-   INTERACTION LOGIC & DYNAMICS - PT MELYONI MINERAL NUSANTARA
+   INTERACTION LOGIC & DYNAMICS - MELYONI GROUP
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -268,7 +268,7 @@ const translations = {
     // Hero
     'hero-tag': 'Mineral, Pertanian & Kelautan',
     'hero-title': 'Sumber Daya Nusantara, Kredibilitas Global.',
-    'hero-desc': 'PT Melyoni Mineral Nusantara mengelola potensi alam Indonesia melalui eksplorasi emas presisi tinggi serta penyuplai komoditas pertanian dan kelautan berkelanjutan berkualitas dunia.',
+    'hero-desc': 'Melyoni Group mengelola potensi alam Indonesia melalui eksplorasi emas presisi tinggi serta penyuplai komoditas pertanian dan kelautan berkelanjutan berkualitas dunia.',
     'hero-btn-explore': 'Sektor Bisnis',
     'hero-btn-contact': 'Hubungi Kami',
     'hero-stat-1-lbl': 'Konsesi Aktif',
@@ -390,7 +390,7 @@ const translations = {
     'form-btn': 'Kirim Pesan',
     
     // Footer
-    'footer-brand-desc': 'PT Melyoni Mineral Nusantara adalah perusahaan eksploitasi mineral, penyuplai produk pertanian, kelautan dan komoditas sumber daya alam Indonesia terkemuka yang berdedikasi pada sains dan kemakmuran sosial.',
+    'footer-brand-desc': 'Melyoni Group adalah perusahaan eksploitasi mineral, penyuplai produk pertanian, kelautan dan komoditas sumber daya alam Indonesia terkemuka yang berdedikasi pada sains dan kemakmuran sosial.',
     'footer-links-explore': 'Jelajahi',
     'footer-links-legal': 'Hukum & Legalitas'
   },
@@ -407,7 +407,7 @@ const translations = {
     // Hero
     'hero-tag': 'Minerals, Agriculture & Marine',
     'hero-title': 'Nusantara Resources, Global Credibility.',
-    'hero-desc': 'PT Melyoni Mineral Nusantara manages Indonesia\'s rich natural resources through high-precision gold exploration and world-class sustainable agricultural and marine commodity supply chains.',
+    'hero-desc': 'Melyoni Group manages Indonesia\'s rich natural resources through high-precision gold exploration and world-class sustainable agricultural and marine commodity supply chains.',
     'hero-btn-explore': 'Business Sectors',
     'hero-btn-contact': 'Contact Us',
     'hero-stat-1-lbl': 'Active Concessions',
@@ -529,7 +529,7 @@ const translations = {
     'form-btn': 'Send Message',
     
     // Footer
-    'footer-brand-desc': 'PT Melyoni Mineral Nusantara is a leading Indonesian diversified resource and commodity group dedicated to mineral exploration, sustainable agricultural crop supply, premium marine aquaculture, scientific excellence, and social prosperity.',
+    'footer-brand-desc': 'Melyoni Group is a leading Indonesian diversified resource and commodity group dedicated to mineral exploration, sustainable agricultural crop supply, premium marine aquaculture, scientific excellence, and social prosperity.',
     'footer-links-explore': 'Explore',
     'footer-links-legal': 'Legal & Compliance'
   }

@@ -1,6 +1,6 @@
-# PT Melyoni Mineral Nusantara - Official Company Profile
+# Melyoni Group - Official Company Profile
 
-An ultra-premium, high-performance corporate profile website designed for **PT Melyoni Mineral Nusantara**, a gold exploration mining company operating in Indonesia (East Kalimantan and North Sulawesi concessions).
+An ultra-premium, high-performance corporate profile website designed for **Melyoni Group**, a diversified natural resources and commodities conglomerate operating in Indonesia.
 
 This website balances visual excellence, clean industrial aesthetics, data transparency, and responsible mining practices (ESG) to serve as a modern digital portal for global investors, partners, and regulators.
 
