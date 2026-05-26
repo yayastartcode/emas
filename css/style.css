@@ -1441,7 +1441,7 @@ textarea.form-input {
     overflow-x: auto;
     white-space: nowrap;
     padding: 0.5rem 0.25rem;
-    max-width: 480px;
+    max-width: 500px;
     scrollbar-width: none; /* Hide scrollbar for Firefox */
   }
   
@@ -1449,9 +1449,14 @@ textarea.form-input {
     display: none; /* Hide scrollbar for Chrome, Safari, Opera */
   }
   
+  .nav-menu li {
+    flex-shrink: 0; /* Prevents list items from compressing */
+  }
+  
   .nav-link {
     font-size: 0.8rem;
     letter-spacing: 0.05em;
+    white-space: nowrap; /* Prevents link text from wrapping into two lines */
   }
 }
 
