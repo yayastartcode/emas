@@ -1466,24 +1466,19 @@ textarea.form-input {
   margin: 0 auto;
 }
 
-/* Compact crops grid (used in commodities showcase) */
-.crops-grid--compact {
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.25rem;
+/* Full-width crops grid (takes entire container width) */
+.crops-grid--full {
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-bottom: 0;
 }
 
-/* Wide card that spans full width in 2-col grid */
-.card-crop--wide {
-  grid-column: span 2;
-  width: 100%;
-}
-
-/* Showcase side visual with sticky scroll */
-.showcase-visual {
-  aspect-ratio: 4/5;
-  position: sticky;
-  top: 120px;
+/* Full-width marine grid (side by side) */
+.marine-grid--full {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: none;
+  margin: 0;
 }
 
 /* ==========================================================================
@@ -1517,8 +1512,12 @@ textarea.form-input {
   }
 
   .crops-grid,
-  .crops-grid--compact {
-    grid-template-columns: repeat(2, 1fr);
+  .crops-grid--full {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .marine-grid--full {
+    grid-template-columns: 1fr;
   }
 
   .about-grid, .projects-content-pane, .esg-grid, .contact-grid {
@@ -1543,19 +1542,7 @@ textarea.form-input {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* On single column layout, remove sticky and fix visual */
-  .showcase-visual {
-    position: relative;
-    top: auto;
-    aspect-ratio: 16/9;
-    max-width: 100%;
-    margin: 0 auto;
-    width: 100%;
-  }
 
-  .commodities-showcase .about-grid {
-    gap: 3rem;
-  }
 }
 
 @media (max-width: 768px) {
@@ -1628,15 +1615,11 @@ textarea.form-input {
     display: none;
   }
 
-  /* Crops grid - single column on mobile */
+  /* Crops grid - 2 columns on mobile */
   .crops-grid,
-  .crops-grid--compact {
-    grid-template-columns: 1fr !important;
+  .crops-grid--full {
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 1rem;
-  }
-
-  .card-crop--wide {
-    grid-column: span 1;
   }
 
   .commodity-img {
@@ -1662,29 +1645,14 @@ textarea.form-input {
   }
 
   /* Marine grid single column */
-  .marine-grid {
+  .marine-grid,
+  .marine-grid--full {
     grid-template-columns: 1fr !important;
     max-width: 100% !important;
     gap: 1rem;
   }
 
-  /* Showcase visual - remove sticky, proper sizing */
-  .showcase-visual {
-    position: relative;
-    top: auto;
-    aspect-ratio: 16/9;
-    max-width: 100%;
-  }
 
-  .commodities-showcase {
-    margin-top: 3rem;
-    padding-top: 3rem;
-  }
-
-  .commodities-showcase .about-grid {
-    gap: 2.5rem;
-    margin-bottom: 4rem !important;
-  }
 
   /* About section */
   .about {
@@ -1808,5 +1776,10 @@ textarea.form-input {
 
   .commodity-desc {
     font-size: 0.75rem;
+  }
+
+  .crops-grid,
+  .crops-grid--full {
+    grid-template-columns: 1fr !important;
   }
 }
