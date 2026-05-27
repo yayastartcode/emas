@@ -47,11 +47,17 @@ html {
   background-color: var(--bg-deep);
   color: var(--text-primary);
   font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
 body {
   overflow-x: hidden;
   line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Custom Scrollbar */
@@ -1460,6 +1466,26 @@ textarea.form-input {
   margin: 0 auto;
 }
 
+/* Compact crops grid (used in commodities showcase) */
+.crops-grid--compact {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* Wide card that spans full width in 2-col grid */
+.card-crop--wide {
+  grid-column: span 2;
+  width: 100%;
+}
+
+/* Showcase side visual with sticky scroll */
+.showcase-visual {
+  aspect-ratio: 4/5;
+  position: sticky;
+  top: 120px;
+}
+
 /* ==========================================================================
    RESPONSIVE MEDIA QUERIES (Mobile First Strategy)
    ========================================================================== */
@@ -1490,7 +1516,8 @@ textarea.form-input {
     gap: 3rem;
   }
 
-  .crops-grid {
+  .crops-grid,
+  .crops-grid--compact {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1515,6 +1542,20 @@ textarea.form-input {
   .tech-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  /* On single column layout, remove sticky and fix visual */
+  .showcase-visual {
+    position: relative;
+    top: auto;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .commodities-showcase .about-grid {
+    gap: 3rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1522,25 +1563,39 @@ textarea.form-input {
     --header-height: 70px;
   }
 
+  .container {
+    padding: 0 1.25rem;
+  }
+
   .section-title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .section-desc {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
   }
 
   .hero-title {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
 
   .hero-desc {
-    font-size: 1.05rem;
+    font-size: 0.95rem;
   }
 
   .hero-stats {
-    gap: 2rem;
-    margin-top: 3rem;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
   }
 
   .hero-stat-num {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.7rem;
   }
 
   /* Hamburger Navigation */
@@ -1561,6 +1616,8 @@ textarea.form-input {
     gap: 2rem;
     transition: left 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     align-items: flex-start;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   .nav-menu.open {
@@ -1568,26 +1625,114 @@ textarea.form-input {
   }
 
   .nav-actions {
-    display: none; /* simplified for mobile, can be placed in menu if needed */
+    display: none;
   }
 
-  .tech-grid {
-    grid-template-columns: 1fr;
+  /* Crops grid - single column on mobile */
+  .crops-grid,
+  .crops-grid--compact {
+    grid-template-columns: 1fr !important;
+    gap: 1rem;
+  }
+
+  .card-crop--wide {
+    grid-column: span 1;
+  }
+
+  .commodity-img {
+    height: 140px;
+  }
+
+  .commodity-body {
+    padding: 1rem 1.25rem 1.25rem;
+  }
+
+  .commodity-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 1rem;
+  }
+
+  .commodity-name {
+    font-size: 1rem;
+  }
+
+  .commodity-desc {
+    font-size: 0.8rem;
+  }
+
+  /* Marine grid single column */
+  .marine-grid {
+    grid-template-columns: 1fr !important;
+    max-width: 100% !important;
+    gap: 1rem;
+  }
+
+  /* Showcase visual - remove sticky, proper sizing */
+  .showcase-visual {
+    position: relative;
+    top: auto;
+    aspect-ratio: 16/9;
+    max-width: 100%;
+  }
+
+  .commodities-showcase {
+    margin-top: 3rem;
+    padding-top: 3rem;
+  }
+
+  .commodities-showcase .about-grid {
+    gap: 2.5rem;
+    margin-bottom: 4rem !important;
+  }
+
+  /* About section */
+  .about {
+    padding: 5rem 0;
+  }
+
+  .about-grid {
+    gap: 2.5rem;
+  }
+
+  .about-visual {
+    aspect-ratio: 16/9;
   }
 
   .about-core-values {
     grid-template-columns: 1fr;
   }
 
+  /* Tech grid */
+  .tech-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Projects */
+  .projects-header {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .projects-nav {
+    align-self: flex-start;
+  }
+
+  /* Contact */
   .form-group-row {
     grid-template-columns: 1fr;
     gap: 1.75rem;
   }
 
   .contact-form-container {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
+  .contact-grid {
+    gap: 3rem;
+  }
+
+  /* Footer */
   .footer-top {
     grid-template-columns: 1fr;
     gap: 3rem;
@@ -1597,5 +1742,71 @@ textarea.form-input {
     flex-direction: column;
     gap: 1.5rem;
     text-align: center;
+  }
+
+  /* Sectors */
+  .sector-card {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .sectors-grid {
+    gap: 2rem;
+  }
+
+  /* ESG */
+  .esg-grid {
+    gap: 2.5rem;
+  }
+
+  .esg-visual {
+    aspect-ratio: 16/9;
+  }
+}
+
+/* Extra small screens (below 480px) */
+@media (max-width: 480px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .hero-title {
+    font-size: 1.65rem;
+  }
+
+  .hero-content {
+    padding-left: 0;
+  }
+
+  .hero-stats {
+    gap: 1.25rem;
+  }
+
+  .hero-stat-num {
+    font-size: 1.35rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    padding: 0.7rem 1.5rem;
+    font-size: 0.85rem;
+  }
+
+  .commodity-img {
+    height: 120px;
+  }
+
+  .commodity-body {
+    padding: 0.85rem 1rem 1rem;
+  }
+
+  .commodity-name {
+    font-size: 0.9rem;
+  }
+
+  .commodity-desc {
+    font-size: 0.75rem;
   }
 }
