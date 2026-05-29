@@ -7,15 +7,15 @@
 
 :root {
   /* Color Tokens */
-  --bg-deep: #080a0f;
-  --bg-card: #11141b;
-  --bg-card-hover: #161c27;
-  --primary-gold: #d4af37;
-  --primary-gold-rgb: 212, 175, 55;
-  --accent-bronze: #c19a6b;
-  --text-primary: #f3f4f6;
-  --text-secondary: #9ca3af;
-  --text-muted: #6b7280;
+  --bg-deep: #f6f8fa;
+  --bg-card: #ffffff;
+  --bg-card-hover: #fcfbfa; /* subtle gold/warm touch */
+  --primary-gold: #c59b27; /* Rich gold with higher contrast */
+  --primary-gold-rgb: 197, 155, 39;
+  --accent-bronze: #ab8657; /* Adjusted bronze for better contrast */
+  --text-primary: #1f2937; /* Charcoal/slate instead of dark gray */
+  --text-secondary: #4b5563; /* Warm slate gray for descriptions */
+  --text-muted: #8892a0; /* Medium gray for captions */
   --white: #ffffff;
   
   /* Layout & Spacing */
@@ -23,11 +23,11 @@
   --container-max-width: 1280px;
   
   /* Borders & Shadows */
-  --border-gold: 1px solid rgba(var(--primary-gold-rgb), 0.2);
-  --border-gold-hover: 1px solid rgba(var(--primary-gold-rgb), 0.5);
-  --border-soft: 1px solid rgba(255, 255, 255, 0.05);
-  --glow-gold: 0 0 20px rgba(var(--primary-gold-rgb), 0.15);
-  --glow-gold-strong: 0 0 35px rgba(var(--primary-gold-rgb), 0.3);
+  --border-gold: 1px solid rgba(var(--primary-gold-rgb), 0.35); /* Increased opacity for light BG */
+  --border-gold-hover: 1px solid rgba(var(--primary-gold-rgb), 0.65);
+  --border-soft: 1px solid rgba(18, 20, 27, 0.07); /* Darker soft border */
+  --glow-gold: 0 4px 20px rgba(var(--primary-gold-rgb), 0.08); /* Adjusted drop shadow */
+  --glow-gold-strong: 0 8px 30px rgba(var(--primary-gold-rgb), 0.15);
   
   /* Fonts */
   --font-heading: 'Outfit', sans-serif;
@@ -85,7 +85,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--white);
+  color: var(--text-primary);
 }
 
 a {
@@ -176,7 +176,7 @@ a {
 
 .btn-secondary {
   background: transparent;
-  color: var(--white);
+  color: var(--text-primary);
   border: var(--border-gold);
 }
 
@@ -201,11 +201,11 @@ a {
 }
 
 .header.scrolled {
-  background-color: rgba(8, 10, 15, 0.85);
+  background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: var(--border-soft);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
   height: 70px;
 }
 
@@ -237,7 +237,7 @@ a {
   font-weight: 800;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--text-primary);
   display: flex;
   flex-direction: column;
 }
@@ -348,7 +348,7 @@ a {
   display: block;
   width: 100%;
   height: 2px;
-  background-color: var(--white);
+  background-color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -391,10 +391,10 @@ a {
   height: 100%;
   background: linear-gradient(
     to bottom,
-    rgba(8, 10, 15, 0.15) 0%,
-    rgba(8, 10, 15, 0.25) 40%,
-    rgba(8, 10, 15, 0.65) 85%,
-    rgba(8, 10, 15, 0.9) 100%
+    rgba(246, 248, 250, 0.1) 0%,
+    rgba(246, 248, 250, 0.3) 40%,
+    rgba(246, 248, 250, 0.75) 85%,
+    rgba(246, 248, 250, 0.96) 100%
   );
   z-index: -1;
 }
@@ -516,7 +516,7 @@ a {
 .about-map-placeholder {
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 70% 30%, rgba(var(--primary-gold-rgb), 0.15) 0%, transparent 60%),
+  background: radial-gradient(circle at 70% 30%, rgba(var(--primary-gold-rgb), 0.12) 0%, transparent 60%),
               var(--bg-card);
   display: flex;
   flex-direction: column;
@@ -534,6 +534,21 @@ a {
   width: 100%;
   height: 100%;
   opacity: 0.15;
+}
+
+/* Style the Indonesian island shapes to be crisp on light BG */
+.about-map-placeholder svg path {
+  stroke: rgba(31, 41, 55, 0.18) !important;
+  fill: rgba(31, 41, 55, 0.03) !important;
+  transition: all 0.3s ease;
+}
+
+.about-map-placeholder svg path[stroke*="#d4af37"] {
+  stroke: rgba(var(--primary-gold-rgb), 0.5) !important;
+}
+
+.map-grid-svg path {
+  stroke: rgba(var(--primary-gold-rgb), 0.35) !important;
 }
 
 .about-map-content {
@@ -586,13 +601,14 @@ a {
   font-size: 0.75rem;
   font-weight: 700;
   color: var(--white);
-  background-color: rgba(var(--primary-gold-rgb), 0.2);
-  border: var(--border-gold);
+  background-color: rgba(31, 41, 55, 0.95);
+  border: 1px solid rgba(var(--primary-gold-rgb), 0.4);
   padding: 0.25rem 0.5rem;
   border-radius: 4px;
   transform: translate(-50%, -130%);
   white-space: nowrap;
   backdrop-filter: blur(4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .marker-kaltim .map-label {
@@ -787,7 +803,7 @@ a {
   font-family: var(--font-heading);
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-primary);
   margin-top: 0.25rem;
 }
 
@@ -868,7 +884,7 @@ a {
   bottom: 2rem;
   left: 2rem;
   right: 2rem;
-  background: rgba(8, 10, 15, 0.85);
+  background: rgba(255, 255, 255, 0.85);
   border: var(--border-soft);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -878,10 +894,11 @@ a {
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
   gap: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .esg-stat {
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(18, 20, 27, 0.08);
 }
 
 .esg-stat:last-child {
@@ -1057,7 +1074,7 @@ a {
   padding: 0.85rem 1rem;
   font-family: var(--font-body);
   font-size: 0.95rem;
-  color: var(--white);
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -1095,6 +1112,26 @@ textarea.form-input {
   background-color: #05060a;
   border-top: var(--border-soft);
   padding: 5rem 0 3rem 0;
+}
+
+/* Scoped colors to keep the dark footer highly readable and contrast-compliant */
+.footer .footer-desc,
+.footer .footer-link {
+  color: #9ca3af !important;
+}
+
+.footer .footer-link:hover {
+  color: var(--primary-gold) !important;
+}
+
+.footer .copyright,
+.footer .legal-links,
+.footer .legal-links a {
+  color: #6b7280 !important;
+}
+
+.footer .legal-links a:hover {
+  color: var(--primary-gold) !important;
 }
 
 .footer-top {
